@@ -1,6 +1,6 @@
 # optruna
 
-Optrunaは、Optunaによるハイパーパラメータ最適化を支援するために開発されたRustライブラリです。
+optrunaは、Optunaによるハイパーパラメータ最適化を支援するために開発されたRustライブラリです。
 
 ## 特徴
 
@@ -19,6 +19,7 @@ optruna = { git = "https://github.com/qropa/optruna.git" }
 optruna = [ "optruna/optimize" ]
 py = [ "optruna/py", "optruna/optimize" ]
 ```
+crates.ioにはいずれ公開すると思います。
 
 プロジェクトのルートに`build.rs`を作成し、以下を記述します:
 ```rust:build.rs
@@ -26,7 +27,6 @@ fn main() {
     println!("cargo:rerun-if-changed={}", "./non_existent_file.rs")
 }
 ```
-crates.ioにはいずれ公開すると思います。
 
 ハイパーパラメータの定義は以下のように行います：
 ```
